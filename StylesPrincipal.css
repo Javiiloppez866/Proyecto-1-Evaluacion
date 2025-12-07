@@ -32,11 +32,11 @@ body {
 }
 
 header {
-    position: fixed; /*Lo mantiene fijo arriba*/
+    position: fixed;
     top: 0;
-    z-index: 100; /*Se coloca delante de todo*/
+    z-index: 100;
     width: 100%;
-    height: 120px;
+    height: 110px;
     color: var(--color-texto);
     border-bottom: 2px solid var(--color-principal);
     background-color: var(--background-color);
@@ -47,24 +47,26 @@ header .container-header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1400px;
+    height: 100%;
     margin: 0 auto;
-    padding: 0 80px; /*Arriba/abajo 0, izquierda/derecha 80px.*/
+    padding: 0 80px;
 }
 
 header .logo-gym {
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 
 header .logo-gym-img {
-    height: 120px;
-    width: 120px;
-    padding: 5%;
-    transition: transform 0.3s ease; /*Animacion para hacerlo mas grande*/
+    height: 80px;
+    width: 80px;
+    transition: transform 0.3s ease;
 }
 
 header .logo-gym-img:hover {
-    transform: scale(1.05); /* Agranda ligeramente el logo al pasar el cursor */
+    transform: scale(1.05);
 }
 
 header .logo-gym span {
@@ -81,7 +83,7 @@ header .menu-options {
 header .menu-options ul {
     display: flex;
     flex-direction: row;
-    list-style: none; /*Quito decoración listas*/
+    list-style: none;
 }
 
 header .menu-options li {
@@ -90,7 +92,7 @@ header .menu-options li {
 
 header .menu-options a {
     color: var(--color-texto);
-    text-decoration: none; /*Quito decoración*/
+    text-decoration: none;
     transition: color 0.2s ease;
     font-size: 20px;
 }
@@ -160,8 +162,229 @@ header .user-controls ion-icon:hover {
     display: block;
 }
 
+main {
+    margin-top: 110px;
+    flex: 1;
+}
 
+main .container-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 
+main .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+main .main-section-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 30px;
+}
+
+main .main-title-odd-1 {
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+main .main-title-odd-3 {
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 3%;
+    text-decoration: underline;
+}
+
+main .main-title-par {
+    color: var(--color-titulo);
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+main .main-section-description p {
+    color: var(--color-texto);
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+main .main-section-options {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+main .options-buttons {
+    display: flex;
+    gap: 237px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+main .option-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 35px 45px;
+    background: linear-gradient(135deg, var(--color-principal) 0%, #e8562e 100%);
+    color: var(--color-texto);
+    text-decoration: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    min-width: 220px;
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+main .option-btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.5);
+    background: linear-gradient(135deg, var(--color-hover) 0%, var(--color-principal) 100%);
+}
+
+main .option-btn ion-icon {
+    font-size: 52px;
+}
+
+main .option-btn span {
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+}
+
+main .main-divider-line {
+    height: 2px;
+    border-bottom: 2px solid var(--color-principal);
+    margin: 30px 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+main .main-section-experiences {
+    padding: 60px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+main .main-stories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+}
+
+main .main-stories-experiences {
+    background: linear-gradient(135deg, #2a2a2c 0%, #1f1f21 100%);
+    border: 2px solid rgba(255, 107, 53, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main .main-stories-experiences:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+    border-color: var(--color-principal);
+}
+
+main .img-profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid var(--color-principal);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
+}
+
+main .main-stories-experiences:hover .img-profile {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 107, 53, 0.5);
+}
+
+main .main-section-experiences h4 {
+    font-size: 1.4rem;
+    color: var(--color-titulo);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+main .main-section-experiences p {
+    font-size: 1rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+main .history-scoring {
+    display: flex;
+    gap: 5px;
+    margin-top: auto;
+}
+
+main .star {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+}
+
+main .main-section-images {
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+main .main-section-images .imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+main .main-section-images .img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid var(--color-principal);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+main .main-section-images .img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.5);
+    border-color: var(--color-hover);
+}
 
 footer {
     background-color: rgb(20, 20, 22);
