@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container-form {
+    background-color: rgba(20, 20, 20, 0.95);
+    border-radius: 30px;
+    padding: 50px 45px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.container-form:hover {
+    transform: translateY(-5px);
+}
+
+.container-form-title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.container-form-title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff6b35;
+    line-height: 1.4;
+}
+
+.container-form-data {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.data input {
+    width: 100%;
+    padding: 16px 20px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border: 1.5px solid rgba(255, 107, 53, 0.2);
+    border-radius: 14px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.data input::placeholder {
+    color: #666;
+}
+
+.data input:focus {
+    border-color: #ff6b35;
+    background-color: rgba(40, 40, 40, 0.9);
+    box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.12);
+}
+
+.data input:hover {
+    border-color: rgba(255, 107, 53, 0.4);
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+}
+
+.boton button {
+    width: 100%;
+    padding: 18px 40px;
+    background-color: #ff6b35;
+    border: none;
+    border-radius: 14px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+.boton button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+    background-color: #ff8c61;
+}
+
+.boton button:active {
+    transform: translateY(-1px);
+}
