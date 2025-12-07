@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --background-color: #1f1f21;
+    --background-color-secundario: #2a2a2c;
+
+    --color-principal: #ff6b35;
+    --color-hover: #ff8c61;
+    --color-accent: #f4a261;
+
+    --color-texto: #ffffff;
+    --color-titulo: #fdce94;
+    --color-texto-secundario: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+header {
+    position: fixed; /*Lo mantiene fijo arriba*/
+    top: 0;
+    z-index: 100; /*Se coloca delante de todo*/
+    width: 100%;
+    height: 120px;
+    color: var(--color-texto);
+    border-bottom: 2px solid var(--color-principal);
+    background-color: var(--background-color);
+}
+
+header .container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px; /*Arriba/abajo 0, izquierda/derecha 80px.*/
+}
+
+header .logo-gym {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-gym-img {
+    height: 120px;
+    width: 120px;
+    padding: 5%;
+    transition: transform 0.3s ease; /*Animacion para hacerlo mas grande*/
+}
+
+header .logo-gym-img:hover {
+    transform: scale(1.05); /* Agranda ligeramente el logo al pasar el cursor */
+}
+
+header .logo-gym span {
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--color-titulo);
+}
+
+header .menu-options {
+    background-color: var(--background-color);
+    height: auto;
+}
+
+header .menu-options ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none; /*Quito decoración listas*/
+}
+
+header .menu-options li {
+    margin: 15px;
+}
+
+header .menu-options a {
+    color: var(--color-texto);
+    text-decoration: none; /*Quito decoración*/
+    transition: color 0.2s ease;
+    font-size: 20px;
+}
+
+header .menu-options a:hover {
+    color: var(--color-principal);
+}
+
+header .user-controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header .user-controls ion-icon {
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--color-principal);
+    transition: all 0.3s ease;
+}
+
+header .user-controls ion-icon:hover {
+    color: var(--color-hover);
+    transform: scale(1.1);
+}
+
+.boton-sign-up,
+.btn-signup-mobile {
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+}
+
+.boton-sign-up:hover,
+.btn-signup-mobile:hover {
+    background-color: var(--color-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 107, 53, 0.4);
+}
+
+.boton-mobile {
+    display: none;
+}
+
+.boton-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: var(--color-principal);
+    transition: all 0.3s ease;
+}
+
+.boton-menu:hover {
+    color: var(--color-hover);
+    transform: scale(1.1);
+}
+
+.boton-menu ion-icon {
+    display: block;
+}
