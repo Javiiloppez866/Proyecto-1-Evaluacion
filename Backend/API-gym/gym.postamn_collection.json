@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "abc123de-4567-89fg-hi01-jklmnopqrstu",
+		"name": "exercises",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3720353"
+	},
+	"item": [
+		{
+			"name": "exercises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/exercises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exercises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exercises/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/exercises/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exercises",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exercises/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/exercises/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exercises",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exercises",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Press Banca\",\n    \"duration\": 45,\n    \"difficulty\": \"medium\",\n    \"calories\": 250,\n    \"date\": \"2024-01-15\",\n    \"active\": true,\n    \"notes\": \"Ejercicio de pecho principal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/exercises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exercises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exercises/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Press Banca\",\n    \"duration\": 60,\n    \"difficulty\": \"hard\",\n    \"calories\": 300,\n    \"date\": \"2024-01-15\",\n    \"active\": true,\n    \"notes\": \"Aumentada intensidad\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/exercises/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exercises",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
