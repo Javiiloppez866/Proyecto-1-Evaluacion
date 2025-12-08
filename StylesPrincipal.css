@@ -20,7 +20,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html,body {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
 }
@@ -36,12 +37,15 @@ body {
     display: none;
 }
 
+/* ========================================
+   HEADER - Estilos Base (Mobile First)
+   ======================================== */
 header {
     position: fixed;
     top: 0;
     z-index: 100;
     width: 100%;
-    height: 110px;
+    height: 70px;
     color: var(--color-texto);
     border-bottom: 2px solid var(--color-principal);
     background-color: var(--background-color);
@@ -55,18 +59,18 @@ header .container-header {
     max-width: 1400px;
     height: 100%;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 15px;
 }
 
 header .logo-gym {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 header .logo-gym-img {
-    height: 80px;
-    width: 80px;
+    height: 45px;
+    width: 45px;
     transition: transform 0.3s ease;
 }
 
@@ -75,45 +79,61 @@ header .logo-gym-img:hover {
 }
 
 header .logo-gym span {
-    font-size: 38px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--color-titulo);
 }
 
 header .menu-options {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
     background-color: var(--background-color);
+    border-bottom: 2px solid var(--color-principal);
+    transition: left 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     height: auto;
 }
 
 header .menu-options ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 20px 0;
     list-style: none;
 }
 
 header .menu-options li {
-    margin: 15px;
+    margin: 8px 15px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 header .menu-options a {
     color: var(--color-texto);
     text-decoration: none;
     transition: color 0.2s ease;
-    font-size: 20px;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
 }
 
 header .menu-options a:hover {
     color: var(--color-principal);
 }
 
+.menu-toggle:checked ~ .container-header .menu-options {
+    left: 0;
+}
+
 header .user-controls {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
 }
 
 header .user-controls ion-icon {
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     color: var(--color-principal);
     transition: all 0.3s ease;
@@ -124,22 +144,24 @@ header .user-controls ion-icon:hover {
     transform: scale(1.1);
 }
 
-.boton-sign-up,
+.boton-sign-up {
+    display: none;
+}
+
 .btn-signup-mobile {
     border: none;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 12px 30px;
     border-radius: 10px;
     background-color: var(--color-principal);
     color: var(--color-texto);
-    font-size: 15px;
+    font-size: 16px;
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
 }
 
-.boton-sign-up:hover,
 .btn-signup-mobile:hover {
     background-color: var(--color-hover);
     transform: translateY(-2px);
@@ -147,11 +169,15 @@ header .user-controls ion-icon:hover {
 }
 
 .boton-mobile {
-    display: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 107, 53, 0.2);
 }
 
 .boton-menu {
-    display: none;
+    display: block;
     cursor: pointer;
     font-size: 28px;
     color: var(--color-principal);
@@ -167,21 +193,24 @@ header .user-controls ion-icon:hover {
     display: block;
 }
 
+/* ========================================
+   MAIN - Estilos Base (Mobile First)
+   ======================================== */
 main {
-    margin-top: 110px;
+    margin-top: 70px;
     flex: 1;
 }
 
 main .container-main {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px 10px;
 }
 
 main .main-content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
 }
 
 main .main-section-description {
@@ -190,19 +219,19 @@ main .main-section-description {
     gap: 20px;
     justify-items: center;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
 }
 
 main .main-title-odd-1 {
     color: var(--color-principal);
-    font-size: 2.5rem;
+    font-size: 1.4rem;
     text-align: center;
     text-decoration: underline;
 }
 
 main .main-title-odd-3 {
     color: var(--color-principal);
-    font-size: 2.5rem;
+    font-size: 1.4rem;
     text-align: center;
     padding-bottom: 3%;
     text-decoration: underline;
@@ -210,17 +239,17 @@ main .main-title-odd-3 {
 
 main .main-title-par {
     color: var(--color-titulo);
-    font-size: 2.5rem;
+    font-size: 1.4rem;
     text-align: center;
     text-decoration: underline;
 }
 
 main .main-section-description p {
     color: var(--color-texto);
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     text-align: center;
     max-width: 800px;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 main .main-section-options {
@@ -233,9 +262,10 @@ main .main-section-options {
 
 main .options-buttons {
     display: flex;
-    gap: 237px;
+    gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -244,13 +274,13 @@ main .option-btn {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    padding: 35px 45px;
+    padding: 20px 25px;
     background: linear-gradient(135deg, var(--color-principal) 0%, #e8562e 100%);
     color: var(--color-texto);
     text-decoration: none;
     border-radius: 15px;
     transition: all 0.3s ease;
-    min-width: 220px;
+    min-width: 140px;
     box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
 }
 
@@ -261,11 +291,11 @@ main .option-btn:hover {
 }
 
 main .option-btn ion-icon {
-    font-size: 52px;
+    font-size: 35px;
 }
 
 main .option-btn span {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
 }
@@ -283,7 +313,7 @@ main .main-divider-line {
 }
 
 main .main-section-experiences {
-    padding: 60px 80px;
+    padding: 40px 20px;
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
@@ -291,16 +321,15 @@ main .main-section-experiences {
 
 main .main-stories {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 25px;
 }
 
 main .main-stories-experiences {
     background: linear-gradient(135deg, #2a2a2c 0%, #1f1f21 100%);
     border: 2px solid rgba(255, 107, 53, 0.2);
     border-radius: 15px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     display: flex;
@@ -316,12 +345,12 @@ main .main-stories-experiences:hover {
 }
 
 main .img-profile {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 4px solid var(--color-principal);
+    border: 3px solid var(--color-principal);
     transition: transform 0.3s ease;
     box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
 }
@@ -332,14 +361,14 @@ main .main-stories-experiences:hover .img-profile {
 }
 
 main .main-section-experiences h4 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: var(--color-titulo);
     margin-bottom: 15px;
     font-weight: 600;
 }
 
 main .main-section-experiences p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--color-texto-secundario);
     line-height: 1.6;
     margin-bottom: 20px;
@@ -354,11 +383,11 @@ main .history-scoring {
 
 main .star {
     color: var(--color-accent);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 main .main-section-images {
-    padding: 60px 20px;
+    padding: 40px 15px;
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
@@ -370,16 +399,16 @@ main .main-section-images {
 
 main .main-section-images .imagenes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 30px;
     width: 100%;
 }
 
 main .main-section-images .img {
     width: 100%;
-    height: 350px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 12px;
     border: 3px solid var(--color-principal);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
@@ -391,10 +420,13 @@ main .main-section-images .img:hover {
     border-color: var(--color-hover);
 }
 
+/* ========================================
+   FOOTER - Estilos Base (Mobile First)
+   ======================================== */
 footer {
     background-color: rgb(20, 20, 22);
     border-top: 2px solid var(--color-principal);
-    padding: 60px 30px 30px;
+    padding: 40px 20px 20px;
     margin-top: auto;
 }
 
@@ -405,14 +437,14 @@ footer .container-footer {
 
 footer .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
     margin-bottom: 40px;
 }
 
 footer .footer-section h3 {
     color: var(--color-titulo);
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -430,7 +462,7 @@ footer .footer-services-list:hover {
 
 footer .footer-section h2 {
     color: var(--color-titulo);
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 15px;
     font-weight: 600;
 }
@@ -468,7 +500,7 @@ footer .social-networks {
 
 footer .social-networks a {
     color: var(--color-principal);
-    font-size: 28px;
+    font-size: 24px;
     transition: all 0.3s ease;
 }
 
@@ -479,6 +511,7 @@ footer .social-networks a:hover {
 
 footer .newsletter-form {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     margin-top: 15px;
 }
@@ -500,7 +533,8 @@ footer .newsletter-form input:focus {
 }
 
 footer .newsletter-form button {
-    padding: 12px 25px;
+    width: 100%;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     background-color: var(--color-principal);
@@ -524,6 +558,8 @@ footer .footer-divider-line {
 
 footer .footer-lower {
     display: flex;
+    flex-direction: column;
+    text-align: center;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -539,6 +575,7 @@ footer .footer-links {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 footer .footer-links a {
@@ -550,4 +587,456 @@ footer .footer-links a {
 
 footer .footer-links a:hover {
     color: var(--color-principal);
+}
+
+/* ========================================
+   MEDIA QUERIES - Mobile First Approach
+   ======================================== */
+
+/* Móvil Grande: 480px+ */
+@media screen and (min-width: 480px) {
+    header {
+        height: 80px;
+    }
+
+    header .container-header {
+        padding: 0 20px;
+    }
+
+    header .logo-gym span {
+        font-size: 22px;
+    }
+
+    header .logo-gym-img {
+        height: 50px;
+        width: 50px;
+    }
+
+    header .menu-options {
+        top: 80px;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    main .container-main {
+        padding: 25px 12px;
+    }
+
+    main .main-title-odd-1,
+    main .main-title-odd-3,
+    main .main-title-par {
+        font-size: 1.6rem;
+    }
+
+    main .main-section-description p {
+        font-size: 1rem;
+    }
+
+    main .option-btn {
+        min-width: 160px;
+        padding: 25px 30px;
+    }
+
+    main .option-btn ion-icon {
+        font-size: 40px;
+    }
+
+    main .option-btn span {
+        font-size: 15px;
+    }
+
+    main .img-profile {
+        width: 100px;
+        height: 100px;
+        border-width: 4px;
+    }
+
+    main .main-section-experiences h4 {
+        font-size: 1.2rem;
+    }
+
+    main .main-section-experiences p {
+        font-size: 0.95rem;
+    }
+
+    main .star {
+        font-size: 1.3rem;
+    }
+
+    main .main-section-images .img {
+        height: 220px;
+    }
+}
+
+/* Tablet: 768px+ */
+@media screen and (min-width: 768px) {
+    header {
+        height: 90px;
+    }
+
+    header .container-header {
+        padding: 0 25px;
+    }
+
+    header .logo-gym span {
+        font-size: 26px;
+    }
+
+    header .logo-gym-img {
+        height: 60px;
+        width: 60px;
+    }
+
+    header .user-controls ion-icon {
+        font-size: 22px;
+    }
+
+    header .menu-options {
+        top: 90px;
+    }
+
+    header .menu-options a {
+        font-size: 18px;
+    }
+
+    main {
+        margin-top: 90px;
+    }
+
+    main .container-main {
+        padding: 30px 15px;
+    }
+
+    main .main-title-odd-1,
+    main .main-title-odd-3,
+    main .main-title-par {
+        font-size: 2rem;
+    }
+
+    main .main-section-description p {
+        font-size: 1.1rem;
+    }
+
+    main .option-btn {
+        min-width: 180px;
+        padding: 30px 35px;
+    }
+
+    main .option-btn ion-icon {
+        font-size: 45px;
+    }
+
+    main .option-btn span {
+        font-size: 16px;
+    }
+
+    main .main-section-images .imagenes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    main .main-section-images .img {
+        height: 250px;
+    }
+
+    main .main-stories-experiences {
+        padding: 30px;
+    }
+
+    footer .newsletter-form {
+        flex-direction: row;
+    }
+
+    footer .newsletter-form button {
+        width: auto;
+        padding: 12px 25px;
+    }
+
+    footer .footer-lower {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    footer .footer-links {
+        justify-content: flex-end;
+    }
+}
+
+/* Desktop/Laptop: 1024px+ */
+@media screen and (min-width: 1024px) {
+    header {
+        height: 110px;
+    }
+
+    header .container-header {
+        padding: 0 40px;
+    }
+
+    header .logo-gym {
+        gap: 15px;
+    }
+
+    header .logo-gym span {
+        font-size: 32px;
+    }
+
+    header .logo-gym-img {
+        height: 70px;
+        width: 70px;
+    }
+
+    header .menu-options {
+        position: static;
+        background-color: var(--background-color);
+        border-bottom: none;
+        box-shadow: none;
+    }
+
+    header .menu-options ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+
+    header .menu-options li {
+        margin: 15px;
+        text-align: left;
+    }
+
+    header .menu-options a {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    header .user-controls {
+        gap: 20px;
+    }
+
+    header .user-controls ion-icon {
+        font-size: 25px;
+    }
+
+    .boton-sign-up {
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: var(--color-principal);
+        color: var(--color-texto);
+        font-size: 15px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+    }
+
+    .boton-sign-up:hover {
+        background-color: var(--color-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(255, 107, 53, 0.4);
+    }
+
+    .boton-mobile {
+        display: none;
+    }
+
+    .boton-menu {
+        display: none;
+    }
+
+    main {
+        margin-top: 110px;
+    }
+
+    main .container-main {
+        padding: 40px 20px;
+    }
+
+    main .main-content {
+        gap: 40px;
+    }
+
+    main .main-title-odd-1,
+    main .main-title-odd-3,
+    main .main-title-par {
+        font-size: 2.5rem;
+    }
+
+    main .main-section-description {
+        padding: 30px;
+    }
+
+    main .main-section-description p {
+        font-size: 1.2rem;
+        padding: 0 20px;
+    }
+
+    main .options-buttons {
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    main .option-btn {
+        min-width: 220px;
+        padding: 35px 45px;
+    }
+
+    main .option-btn ion-icon {
+        font-size: 52px;
+    }
+
+    main .option-btn span {
+        font-size: 17px;
+    }
+
+    main .main-stories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    main .main-section-experiences {
+        padding: 40px 40px;
+    }
+
+    main .img-profile {
+        width: 120px;
+        height: 120px;
+    }
+
+    main .main-section-experiences h4 {
+        font-size: 1.4rem;
+    }
+
+    main .main-section-experiences p {
+        font-size: 1rem;
+    }
+
+    main .star {
+        font-size: 1.5rem;
+    }
+
+    main .main-section-images {
+        padding: 60px 20px;
+    }
+
+    main .main-section-images .imagenes {
+        gap: 30px;
+    }
+
+    main .main-section-images .img {
+        height: 300px;
+    }
+
+    footer {
+        padding: 60px 30px 30px;
+    }
+
+    footer .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+    }
+
+    footer .footer-section h3 {
+        font-size: 20px;
+    }
+
+    footer .footer-section h2 {
+        font-size: 22px;
+    }
+
+    footer .social-networks a {
+        font-size: 28px;
+    }
+}
+
+/* Desktop Grande: 1200px+ */
+@media screen and (min-width: 1200px) {
+    header .container-header {
+        padding: 0 80px;
+    }
+
+    header .logo-gym span {
+        font-size: 38px;
+    }
+
+    header .logo-gym-img {
+        height: 80px;
+        width: 80px;
+    }
+
+    main .options-buttons {
+        gap: 60px;
+    }
+
+    main .main-stories {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    main .main-section-experiences {
+        padding: 60px 80px;
+    }
+
+    main .main-section-images .img {
+        height: 350px;
+    }
+}
+
+/* Desktop Extra Grande: 1400px+ */
+@media screen and (min-width: 1400px) {
+    header .container-header {
+        padding: 0 100px;
+    }
+
+    main .main-section-images .img {
+        height: 400px;
+    }
+}
+
+/* Landscape en pantallas pequeñas */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    header {
+        height: 60px;
+    }
+
+    header .logo-gym-img {
+        height: 40px;
+        width: 40px;
+    }
+
+    header .logo-gym span {
+        font-size: 18px;
+    }
+
+    header .menu-options {
+        top: 60px;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    main .container-main {
+        padding: 15px 10px;
+    }
+
+    main .main-title-odd-1,
+    main .main-title-odd-3,
+    main .main-title-par {
+        font-size: 1.4rem;
+    }
+
+    main .main-section-images .img {
+        height: 200px;
+    }
+
+    main .option-btn {
+        padding: 15px 25px;
+    }
+
+    main .main-stories-experiences {
+        padding: 15px;
+    }
 }
