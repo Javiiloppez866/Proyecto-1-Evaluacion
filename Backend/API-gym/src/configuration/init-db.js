@@ -12,6 +12,7 @@ async function initDatabase() {
                 table.datetime('date').defaultTo(db.fn.now());
                 table.boolean('active').defaultTo(true);
                 table.text('notes').defaultTo('');
+                table.string('order').notNullable();
             });
             console.log('✅ Tabla exercises creada');
         }

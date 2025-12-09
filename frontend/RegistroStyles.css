@@ -45,7 +45,7 @@ body {
 
 .container-form-data {
     display: flex;
-    flex-direction: column;
+    flex-direction:column-reverse;
     gap: 30px;
 }
 
