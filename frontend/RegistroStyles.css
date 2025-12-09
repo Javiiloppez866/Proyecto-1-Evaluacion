@@ -176,6 +176,10 @@ body {
         gap: 16px;
     }
 
+    .data-nuevo{
+        display: none;
+    }
+
     .data input,
     .data select,
     .data textarea {
@@ -224,6 +228,10 @@ body {
         gap: 14px;
     }
 
+    .data-nuevo{
+        display: none;
+    }
+
     .data input,
     .data select,
     .data textarea {
@@ -265,6 +273,10 @@ body {
 
     .data {
         gap: 12px;
+    }
+
+    .data-nuevo{
+        display: none;
     }
 
     .data input,
