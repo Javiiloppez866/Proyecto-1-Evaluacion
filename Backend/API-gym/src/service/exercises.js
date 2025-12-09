@@ -8,7 +8,7 @@ const findExercise = (async(id) => {
     return await db('exercises').select('*').where({id: id}).first();
 });
 
-const addExercise = (async(name, duration, difficulty, calories, date, active, notes) => {
+const addExercise = (async(name, duration, difficulty, calories, date, active, notes, order) => {
     return await db('exercises').insert({
         name: name,
         duration: duration,
@@ -16,11 +16,12 @@ const addExercise = (async(name, duration, difficulty, calories, date, active, n
         calories: calories,
         date: date,
         active: active,
-        notes: notes
+        notes: notes,
+        order: order
     });
 });
 
-const modifyExercise = (async(id, name, duration, difficulty, calories, date, active, notes) => {
+const modifyExercise = (async(id, name, duration, difficulty, calories, date, active, notes, order) => {
     await db('exercises').where({id: id}).update({
         name: name,
         duration: duration,
@@ -28,7 +29,8 @@ const modifyExercise = (async(id, name, duration, difficulty, calories, date, ac
         calories: calories,
         date: date,
         active: active,
-        notes: notes
+        notes: notes,
+        order: order
     });
 });
 

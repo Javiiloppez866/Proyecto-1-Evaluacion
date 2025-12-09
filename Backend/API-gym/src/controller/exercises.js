@@ -55,8 +55,9 @@ const postExercise = (async (req, res) => {
     const date = req.body.date;
     const active = req.body.active;
     const notes = req.body.notes;
+    const order = req.body.order;
     
-    const newExercise = await addExercise(name, duration, difficulty, calories, date, active, notes);
+    const newExercise = await addExercise(name, duration, difficulty, calories, date, active, notes, order);
     res.status(201).json(newExercise);
 });
 
@@ -95,8 +96,9 @@ const putExercise = (async (req, res) => {
     const date = req.body.date;
     const active = req.body.active;
     const notes = req.body.notes;
+    const order = req.body.order
 
-    await modifyExercise(id, name, duration, difficulty, calories, date, active, notes);
+    await modifyExercise(id, name, duration, difficulty, calories, date, active, notes, order);
 
     res.status(204).end();
 });
