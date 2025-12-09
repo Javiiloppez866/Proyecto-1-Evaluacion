@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Registro de usuario</title>
+    <title>Registro de ejercicio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,21 +19,34 @@
         <form class="container-form">
 
             <div class="container-form-title">
-                <h2>Regístrate ahora con nosotros y disfruta de nuestros servicios.</h2>
+                <h2>Crea tu ejercicio con todas sus características.</h2>
             </div>
 
             <div class="container-form-data">
 
                 <div class="data">
-                    <input type="text" name="name" placeholder="Nombre" required>
-                    <input type="text" name="surnames" placeholder="Apellidos" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Contraseña" required>
-                    <input type="tel" name="telephone-number" placeholder="Teléfono" required>
+                    <input class="data-original" type="text" name="name" placeholder="Nombre del ejercicio" required>
+                    
+                    <input class="data-original" type="text" name="duration" placeholder="Duración (minutos)" required>
+                    
+                    <input  class="data-original" type="text" name="difficulty" placeholder="Dificultad" required>
+                    
+                    <input  class="data-original" type="text" name="calories" placeholder="Calorías" required>
+                    
+                    <input class="data-original" type="text" name="date" placeholder="Fecha" required>
+
+                    <input class="data-nuevo" type="text" name="order" placeholder="Orden" required>
+                    
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                        <input type="checkbox" name="active" style="width: auto;">
+                        <span>Activo</span>
+                    </label>
+                    
+                    <textarea name="notes" placeholder="Notas adicionales" rows="4"></textarea>
                 </div>
 
                 <div class="boton">
-                    <button type="submit">Regístrate</button>
+                    <button type="submit">Crear</button>
                 </div>
             </div>
         </form>
